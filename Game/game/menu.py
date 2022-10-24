@@ -1197,21 +1197,25 @@ def medusaMenu4():
 def b1_darleneBack():
     while True:
         ans = input("Press [B] to go back: ").upper()
+        sfx.play()
         darleneMenu1() if ans == "B" else print("Invalid Input!")
 
 def b1_barslafBack():
     while True:
         ans = input("Press [B] to go back: ").upper()
+        sfx.play()
         barslafMenu1() if ans == "B" else print("Invalid Input!")
 
 def b1_ukpanaBack():
     while True:
         ans = input("Press [B] to go back: ").upper()
+        sfx.play()
         ukpanaMenu1() if ans == "B" else print("Invalid Input!")
 
 def b1_medusaBack():
     while True:
         ans = input("Press [B] to go back: ").upper()
+        sfx.play()
         medusaMenu1() if ans == "B" else print("Invalid Input!")
 
 
@@ -1220,21 +1224,25 @@ def b1_medusaBack():
 def b2_darleneBack():
     while True:
         ans = input("Press [B] to go back: ").upper()
+        sfx.play()
         darleneMenu2() if ans == "B" else print("Invalid Input!")
 
 def b2_barslafBack():
     while True:
         ans = input("Press [B] to go back: ").upper()
+        sfx.play()
         barslafMenu2() if ans == "B" else print("Invalid Input!")
 
 def b2_ukpanaBack():
     while True:
         ans = input("Press [B] to go back: ").upper()
+        sfx.play()
         ukpanaMenu2() if ans == "B" else print("Invalid Input!")
 
 def b2_medusaBack():
     while True:
         ans = input("Press [B] to go back: ").upper()
+        sfx.play()
         medusaMenu2() if ans == "B" else print("Invalid Input!")
 
 
@@ -1242,21 +1250,25 @@ def b2_medusaBack():
 def g1_darleneBack():
     while True:
         ans = input("Press [B] to go back: ").upper()
+        sfx.play()
         darleneMenu3() if ans == "B" else print("Invalid Input!")
 
 def g1_barslafBack():
     while True:
         ans = input("Press [B] to go back: ").upper()
+        sfx.play()
         barslafMenu3() if ans == "B" else print("Invalid Input!")
 
 def g1_ukpanaBack():
     while True:
         ans = input("Press [B] to go back: ").upper()
+        sfx.play()
         ukpanaMenu3() if ans == "B" else print("Invalid Input!")
 
 def g1_medusaBack():
     while True:
         ans = input("Press [B] to go back: ").upper()
+        sfx.play()
         medusaMenu3() if ans == "B" else print("Invalid Input!")
 
 
@@ -1264,21 +1276,25 @@ def g1_medusaBack():
 def g2_darleneBack():
     while True:
         ans = input("Press [B] to go back: ").upper()
+        sfx.play()
         darleneMenu4() if ans == "B" else print("Invalid Input!")
 
 def g2_barslafBack():
     while True:
         ans = input("Press [B] to go back: ").upper()
+        sfx.play()
         barslafMenu4() if ans == "B" else print("Invalid Input!")
 
 def g2_ukpanaBack():
     while True:
         ans = input("Press [B] to go back: ").upper()
+        sfx.play()
         ukpanaMenu4() if ans == "B" else print("Invalid Input!")
 
 def g2_medusaBack():
     while True:
         ans = input("Press [B] to go back: ").upper()
+        sfx.play()
         medusaMenu4() if ans == "B" else print("Invalid Input!")
 
 
