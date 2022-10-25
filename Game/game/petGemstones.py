@@ -7,6 +7,7 @@ pygame.mixer.init()
 darleneChoice = mixer.Sound(r'sfx\darleneSelect.mp3')
 barslafChoice = mixer.Sound(r'sfx\barslafSelect.mp3')
 ukpanaChoice = mixer.Sound(r'sfx\ukpanaSelect.mp3')
+meduseChoice = mixer.Sound(r'sfx\medusaSelect.mp3')
 sfx = mixer.Sound(r'sfx\select.mp3')
 
 
@@ -415,7 +416,8 @@ def petSelectionBoy1():
                 print(" ║                                                              ╚════════════════════════════════════════╝                                                              ║")
                 print("██                                                                                                                                                                      ██")
                 print(" ╚██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██╝")
-
+                meduseChoice.play()
+                meduseChoice.set_volume(0.6)
                 confirmPet = input("\n[Y] for YES [N] for NO: ").upper()
                 sfx.play()
 
@@ -903,7 +905,8 @@ def petSelectionBoy2():
                 print(" ║                                                              ╚════════════════════════════════════════╝                                                              ║")
                 print("██                                                                                                                                                                      ██")
                 print(" ╚██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██╝")
-
+                meduseChoice.play()
+                meduseChoice.set_volume(0.6)
                 confirmPet = input("\n[Y] for YES [N] for NO: ").upper()
                 sfx.play()
 
@@ -1394,7 +1397,8 @@ def petSelectionGirl1():
                 print(" ║                                                              ╚════════════════════════════════════════╝                                                              ║")
                 print("██                                                                                                                                                                      ██")
                 print(" ╚██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██╝")
-
+                meduseChoice.play()
+                meduseChoice.set_volume(0.6)
                 confirmPet = input("\n[Y] for YES [N] for NO: ").upper()
                 sfx.play()
 
@@ -1884,7 +1888,8 @@ def petSelectionGirl2():
                 print(" ║                                                              ╚════════════════════════════════════════╝                                                              ║")
                 print("██                                                                                                                                                                      ██")
                 print(" ╚██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██╝")
-
+                meduseChoice.play()
+                meduseChoice.set_volume(0.6)
                 confirmPet = input("\n[Y] for YES [N] for NO: ").upper()
                 sfx.play()
 

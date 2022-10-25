@@ -6,6 +6,9 @@ from time import sleep
 from pygame import mixer
 
 mixer.init()
+atkSfx = mixer.Sound(r'sfx\attack.wav')
+battleTheme = mixer.Sound(r'sfx\battle.ogg')
+victorySfx = mixer.Sound(r'sfx\victory.mp3')
 defeatSfx = mixer.Sound(r'sfx\defeat.mp3')
 
 class Ukpana:
@@ -25,24 +28,28 @@ class Pet3(Ukpana):
                 damage1 = randint(35, 55)
                 other.health -= damage1
                 print(f"\nFire of Darkness dealt {damage1} damage".format(damage1))
+                atkSfx.play()
                 break
 
             elif moves == "2":
                 damage2 = randint(40, 60)
                 other.health -= damage2
                 print(f"\nDarkness Slam dealt {damage2} damage".format(damage2))
+                atkSfx.play()
                 break
 
             elif moves == "3":
                 damage3 = randint(50, 70)
                 other.health -= damage3
                 print(f"\nDark Pulse dealt{damage3} damage".format(damage3))
+                atkSfx.play()
                 break
 
             elif moves == "4":
                 damage4 = randint(100, 110)
                 other.health -= damage4
                 print(f"\nCPower of Darkness! dealt {damage4}".format(damage4))
+                atkSfx.play()
                 break
 
             else:
@@ -57,6 +64,7 @@ class Mobs3(Ukpana):
         other.health -= mobDamage
         print(f"\nThe enemy dealt {mobDamage} damage".format(mobDamage))
 
+
 def ukpanaCombat(pet, enemy):
     mobs = randint(1, 4)
 
@@ -64,7 +72,8 @@ def ukpanaCombat(pet, enemy):
     def mob1():
         for x in range(0, 7):
             animate(f'titlescreen/exploring/exp{x}.txt')
-        sleep(1.5)
+        battleTheme.play(3)
+        battleTheme.set_volume(0.5)
         print("                                                                                                                                                                          ")
         print("                                                                                                                                                                          ")
         print("                                                                                                                                                                          ")
@@ -115,7 +124,6 @@ def ukpanaCombat(pet, enemy):
 
             if pet.health <= 0:
                 break
-            sleep(1.5)
             print("                                                                                                                                                                          ")
             print("                                                                                                                                                                          ")
             print("                                                                                                                                                                          ")
@@ -161,7 +169,8 @@ def ukpanaCombat(pet, enemy):
     def mob2():
         for x in range(0, 7):
             animate(f'titlescreen/exploring/exp{x}.txt')
-        sleep(1.5)
+        battleTheme.play(3)
+        battleTheme.set_volume(0.5)
         print("                                                                                                                                                                          ")
         print("                                                                                                                                                                          ")
         print("                                                                                                                                                                          ")
@@ -213,7 +222,6 @@ def ukpanaCombat(pet, enemy):
 
             if pet.health <= 0:
                 break
-            sleep(1.5)
             print("                                                                                                                                                                          ")
             print("                                                                                                                                                                          ")
             print("                                                                                                                                                                          ")
@@ -259,7 +267,8 @@ def ukpanaCombat(pet, enemy):
     def mob3():
         for x in range(0, 7):
             animate(f'titlescreen/exploring/exp{x}.txt')
-        sleep(1.5)
+        battleTheme.play(3)
+        battleTheme.set_volume(0.5)
         print("                                                                                                                                                                          ")
         print("                                                                                                                                                                          ")
         print("                                                                                                                                                                          ")
@@ -310,7 +319,6 @@ def ukpanaCombat(pet, enemy):
 
             if pet.health <= 0:
                 break
-            sleep(1.5)
             print("                                                                                                                                                                          ")
             print("                                                                                                                                                                          ")
             print("                                                                                                                                                                          ")
@@ -358,7 +366,8 @@ def ukpanaCombat(pet, enemy):
     def mob4():
         for x in range(0, 7):
             animate(f'titlescreen/exploring/exp{x}.txt')
-        sleep(1.5)
+        battleTheme.play(3)
+        battleTheme.set_volume(0.5)
         print("                                                                                                                                                                          ")
         print("                                                                                                                                                                          ")
         print("                                                                                                                                                                          ")
@@ -410,7 +419,6 @@ def ukpanaCombat(pet, enemy):
 
             if pet.health <= 0:
                 break
-            sleep(1.5)
             print("                                                                                                                                                                          ")
             print("                                                                                                                                                                          ")
             print("                                                                                                                                                                          ")
@@ -468,6 +476,7 @@ def ukpanaCombat(pet, enemy):
 
     if pet.health > 0:
         print("\n\n\n\n\n\n\n\n")
+        battleTheme.stop()
         print("╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗")
         print("║ ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ ║")
         print("║ ║                                                                                                                                                            ║ ║")
@@ -493,10 +502,12 @@ def ukpanaCombat(pet, enemy):
         print("║ ║                                                                                                                                                            ║ ║")
         print("║ ╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝ ║")
         print("╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝")
+        victorySfx.play()
         print("\n\n\n\n\n\n\n\n")
 
     if enemy.health > 0:
         print("\n\n\n\n\n\n\n\n")
+        battleTheme.stop()
         print("╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗")
         print("║ ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ ║")
         print("║ ║                                                                                                                                                            ║ ║")

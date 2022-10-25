@@ -4,9 +4,11 @@ from pygame import mixer
 
 pygame.mixer.init()
 sfx = mixer.Sound(r'sfx\select.mp3')
-
+goddessBgm = mixer.Sound(r'sfx\goddessTheme.mp3')
 
 def introductionBoy1():
+    goddessBgm.play()
+    goddessBgm.set_volume(0.5)
     print("\n\n")
     print(" ╔██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██╗ ")
     print("██                                                                                                                                                                      ██")
@@ -48,10 +50,14 @@ def introductionBoy1():
 
     proceedKey =  input("\n\nPress any key to proceed...")
     sfx.play()
+    goddessBgm.stop()
     characterNameBoy1()
 
 
 def introductionBoy2():
+    goddessBgm.play()
+    goddessBgm.set_volume(0.5)
+    print("\n\n")
     print(" ╔██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██╗ ")
     print("██                                                                                                                                                                      ██")
     print(" ║                                                                                             ..                                                                       ║ ")
@@ -92,10 +98,14 @@ def introductionBoy2():
 
     proceedKey =  input("\n\n\nPress any key to proceed...")
     sfx.play()
+    goddessBgm.stop()
     characterNameBoy2()
 
 
 def introductionGirl1():
+    goddessBgm.play()
+    goddessBgm.set_volume(0.5)
+    print("\n\n")
     print(" ╔██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██╗ ")
     print("██                                                                                                                                                                      ██")
     print(" ║                                                                                             ..                                                                       ║ ")
@@ -136,9 +146,13 @@ def introductionGirl1():
 
     proceedKey =  input("\n\n\nPress any key to proceed...")
     sfx.play()
+    goddessBgm.stop()
     characterNameGirl1()
 
 def introductionGirl2():
+    goddessBgm.play()
+    goddessBgm.set_volume(0.5)
+    print("\n\n")
     print(" ╔██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██╗ ")
     print("██                                                                                                                                                                      ██")
     print(" ║                                                                                             ..                                                                       ║ ")
@@ -179,5 +193,6 @@ def introductionGirl2():
 
     proceedKey =  input("\n\n\nPress any key to proceed...")
     sfx.play()
+    goddessBgm.stop()
     characterNameGirl2()
 

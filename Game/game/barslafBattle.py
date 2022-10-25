@@ -6,6 +6,10 @@ from time import sleep
 from pygame import mixer
 
 mixer.init()
+atkSfx = mixer.Sound(r'sfx\attack.wav')
+dmgSound2 = mixer.Sound(r'sfx\barslafDamage.mp3')
+battleTheme = mixer.Sound(r'sfx\battle.ogg')
+victorySfx = mixer.Sound(r'sfx\victory.mp3')
 defeatSfx = mixer.Sound(r'sfx\defeat.mp3')
 
 class Barslaf:
@@ -26,24 +30,28 @@ class Pet2(Barslaf):
                 damage1 = randint(35, 55)
                 other.health -= damage1
                 print(f"\nAbsolute Zero Point dealt {damage1} damage".format(damage1))
+                atkSfx.play()
                 break
 
             elif moves == "2":
                 damage2 = randint(40, 60)
                 other.health -= damage2
                 print(f"\nIce Spear dealt {damage2} damage".format(damage2))
+                atkSfx.play()
                 break
 
             elif moves == "3":
                 damage3 = randint(50, 70)
                 other.health -= damage3
                 print(f"\nIce Pillar dealt{damage3} damage".format(damage3))
+                atkSfx.play()
                 break
 
             elif moves == "4":
                 damage4 = randint(100, 110)
                 other.health -= damage4
                 print(f"\nYou Fools shall Die! dealt {damage4}".format(damage4))
+                atkSfx.play()
                 break
 
             else:
@@ -58,9 +66,8 @@ class Mobs2(Barslaf):
         mobDamage = randint(50, 100)
         other.health -= mobDamage
         print(f"\nThe enemy dealt {mobDamage} damage".format(mobDamage))
-
-
-
+        dmgSound2.play()
+        dmgSound2.set_volume(1.0)
 
 def barslafCombat(pet, enemy):
     mobs = randint(1, 4)
@@ -69,7 +76,8 @@ def barslafCombat(pet, enemy):
     def mob1():
         for x in range(0, 7):
             animate(f'titlescreen/exploring/exp{x}.txt')
-        sleep(1.5)
+        battleTheme.play(3)
+        battleTheme.set_volume(0.5)
         print("                                                                                                                                                                          ")
         print("                                                                                                                                                                          ")
         print("                                                                                                                                                                          ")
@@ -163,6 +171,8 @@ def barslafCombat(pet, enemy):
     def mob2():
         for x in range(0, 7):
             animate(f'titlescreen/exploring/exp{x}.txt')
+        battleTheme.play(3)
+        battleTheme.set_volume(0.5)
         print("                                                                                                                                                                          ")
         print("                                                                                                                                                                          ")
         print("                                                                                                                                                                          ")
@@ -257,6 +267,8 @@ def barslafCombat(pet, enemy):
     def mob3():
         for x in range(0, 7):
             animate(f'titlescreen/exploring/exp{x}.txt')
+        battleTheme.play(3)
+        battleTheme.set_volume(0.5)
         print("                                                                                                                                                                          ")
         print("                                                                                                                                                                          ")
         print("                                                                                                                                                                          ")
@@ -351,6 +363,8 @@ def barslafCombat(pet, enemy):
     def mob4():
         for x in range(0, 7):
             animate(f'titlescreen/exploring/exp{x}.txt')
+        battleTheme.play(3)
+        battleTheme.set_volume(0.5)
         print("                                                                                                                                                                          ")
         print("                                                                                                                                                                          ")
         print("                                                                                                                                                                          ")
@@ -455,6 +469,7 @@ def barslafCombat(pet, enemy):
 
     if pet.health > 0:
         print("\n\n\n\n\n\n\n\n")
+        battleTheme.stop()
         print("╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗")
         print("║ ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ ║")
         print("║ ║                                                                                                                                                            ║ ║")
@@ -480,10 +495,12 @@ def barslafCombat(pet, enemy):
         print("║ ║                                                                                                                                                            ║ ║")
         print("║ ╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝ ║")
         print("╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝")
+        victorySfx.play()
         print("\n\n\n\n\n\n\n\n")
 
     if enemy.health > 0:
         print("\n\n\n\n\n\n\n\n")
+        battleTheme.stop()
         print("╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗")
         print("║ ╔════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ ║")
         print("║ ║                                                                                                                                                            ║ ║")
