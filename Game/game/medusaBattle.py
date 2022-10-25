@@ -1,10 +1,12 @@
 #battle sa PET: Medusa
-import pygame
+
 from animation import animate
 from random import randint
 from time import sleep
 from pygame import mixer
 
+mixer.init()
+defeatSfx = mixer.Sound(r'sfx\defeat.mp3')
 
 class Medusa:
     def __init__(self, health):
@@ -516,4 +518,5 @@ def medusaCombat(pet, enemy):
         print("║ ║                                                                                                                                                            ║ ║")
         print("║ ╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝ ║")
         print("╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝")
+        defeatSfx.play()
         print("\n\n\n\n\n\n\n\n")

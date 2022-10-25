@@ -87,7 +87,7 @@ def darleneMenu1():
 
         case other:
             print("INVALID INPUT")
-            b1_darleneBack()
+            darleneMenu1()
 
 
 def barslafMenu1():
@@ -161,7 +161,7 @@ def barslafMenu1():
 
         case other:
             print("INVALID INPUT")
-            b1_barslafBack()
+            barslafMenu1()
 
 
 def ukpanaMenu1():
@@ -235,7 +235,7 @@ def ukpanaMenu1():
 
         case other:
             print("Invalid Input")
-            b1_ukpanaBack()
+            ukpanaMenu1()
 
 
 def medusaMenu1():
@@ -308,7 +308,7 @@ def medusaMenu1():
 
         case other:
             print("INVALID INPUT")
-            b1_medusaBack()
+            medusaMenu1()
 
 
 ##################################################################################### BOY MODEL 2 MENU ################################################################################
@@ -383,7 +383,7 @@ def darleneMenu2():
 
         case other:
             print("INVALID INPUT")
-            b2_darleneBack()
+            darleneMenu2()
 
 def barslafMenu2():
     print(" ╔██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██╗ ")
@@ -455,7 +455,7 @@ def barslafMenu2():
 
         case other:
             print("INVALID INPUT")
-            b2_barslafBack()
+            barslafMenu2()
 
 
 
@@ -529,7 +529,7 @@ def ukpanaMenu2():
 
         case other:
             print("INVALID INPUT")
-            b2_ukpanaBack()
+            ukpanaMenu2()
 
 
 
@@ -603,7 +603,7 @@ def medusaMenu2():
 
         case other:
             print("INVALID INPUT")
-            b2_medusaBack()
+            medusaMenu2()
 
 
 ################################################################################### GIRL MODEL 1 MENU  ###############################################################################
@@ -677,7 +677,7 @@ def darleneMenu3():
 
         case other:
             print("INVALID INPUT")
-            g1_darleneBack()
+            darleneMenu3()
 
 
 def barslafMenu3():
@@ -726,7 +726,7 @@ def barslafMenu3():
 
     match menuSelection:
         case "1":
-            barslafCombat(Pet2(), Mobs2)
+            barslafCombat(Pet2(), Mobs2())
             g1_barslafBack()
 
         case "2":
@@ -750,7 +750,7 @@ def barslafMenu3():
 
         case other:
             print("INVALID INPUT")
-            g1_barslafBack()
+            barslafMenu3()
 
 
 def ukpanaMenu3():
@@ -823,7 +823,7 @@ def ukpanaMenu3():
 
         case other:
             print("INVALID INPUT")
-            g1_ukpanaBack()
+            ukpanaMenu3()
 
 
 
@@ -897,7 +897,7 @@ def medusaMenu3():
 
         case other:
             print("INVALID INPUT")
-            g1_medusaBack()
+            medusaMenu3()
 
 
 ################################################################################### GIRL MODEL 2 MENU  ###############################################################################
@@ -947,7 +947,7 @@ def darleneMenu4():
 
     match menuSelection:
         case "1":
-            darleneCombat(Pet1(), Mobs1)
+            darleneCombat(Pet1(), Mobs1())
             g2_darleneBack()
 
         case "2":
@@ -971,7 +971,7 @@ def darleneMenu4():
 
         case other:
             print("INVALID INPUT")
-            g2_darleneBack()
+            darleneMenu4()
 
 
 def barslafMenu4():
@@ -1020,7 +1020,7 @@ def barslafMenu4():
 
     match menuSelection:
         case "1":
-            barslafCombat(Pet2(), Mobs2)
+            barslafCombat(Pet2(), Mobs2())
             g2_barslafBack()
 
         case "2":
@@ -1044,7 +1044,7 @@ def barslafMenu4():
 
         case other:
             print("INVALID INPUT")
-            g2_barslafBack()
+            barslafMenu4()
 
 
 def ukpanaMenu4():
@@ -1117,7 +1117,7 @@ def ukpanaMenu4():
 
         case other:
             print("INVALID INPUT")
-            g2_ukpanaBack()
+            ukpanaMenu4()
 
 
 def medusaMenu4():
@@ -1190,7 +1190,7 @@ def medusaMenu4():
 
         case other:
             print("INVALID INPUT")
-            g2_medusaBack()
+            medusaMenu4()
 
 
 ######### BOY MODEL 1 RETURN MENU #########
@@ -1331,6 +1331,7 @@ def darleneExit1():
         print("\n\n\n\n\n\n\n\n")
 
         exit_input = input("Do you want to exit the game? [Y/N] ").upper()
+        sfx.play()
 
         if exit_input == "N":
             darleneMenu1()
@@ -1374,6 +1375,7 @@ def barslafExit1():
         print("\n\n\n\n\n\n\n\n")
 
         exit_input = input("Do you want to exit the game? [Y/N] ").upper()
+        sfx.play()
 
         if exit_input == "N":
             barslafMenu1()
@@ -1417,6 +1419,7 @@ def ukpanaExit1():
         print("\n\n\n\n\n\n\n\n")
 
         exit_input = input("Do you want to exit the game? [Y/N] ").upper()
+        sfx.play()
 
         if exit_input == "N":
             ukpanaMenu1()
@@ -1460,6 +1463,7 @@ def medusaExit1():
         print("\n\n\n\n\n\n\n\n")
 
         exit_input = input("Do you want to exit the game? [Y/N] ").upper()
+        sfx.play()
 
         if exit_input == "N":
             medusaMenu1()
@@ -1504,6 +1508,7 @@ def darleneExit2():
         print("\n\n\n\n\n\n\n\n")
 
         exit_input = input("Do you want to exit the game? [Y/N] ").upper()
+        sfx.play()
 
         if exit_input == "N":
             darleneMenu2()
@@ -1548,6 +1553,7 @@ def barslafExit2():
         print("\n\n\n\n\n\n\n\n")
 
         exit_input = input("Do you want to exit the game? [Y/N] ").upper()
+        sfx.play()
 
         if exit_input == "N":
             barslafMenu2()
@@ -1591,6 +1597,7 @@ def ukpanaExit2():
         print("\n\n\n\n\n\n\n\n")
 
         exit_input = input("Do you want to exit the game? [Y/N] ").upper()
+        sfx.play()
 
         if exit_input == "N":
             ukpanaMenu2()
@@ -1635,6 +1642,7 @@ def medusaExit2():
         print("\n\n\n\n\n\n\n\n")
 
         exit_input = input("Do you want to exit the game? [Y/N] ").upper()
+        sfx.play()
 
         if exit_input == "N":
             medusaMenu2()
@@ -1679,6 +1687,7 @@ def darleneExit3():
         print("\n\n\n\n\n\n\n\n")
 
         exit_input = input("Do you want to exit the game? [Y/N] ").upper()
+        sfx.play()
 
         if exit_input == "N":
             darleneMenu3()
@@ -1722,6 +1731,7 @@ def barslafExit3():
         print("\n\n\n\n\n\n\n\n")
 
         exit_input = input("Do you want to exit the game? [Y/N] ").upper()
+        sfx.play()
 
         if exit_input == "N":
             barslafMenu3()
@@ -1765,6 +1775,7 @@ def ukpanaExit3():
         print("\n\n\n\n\n\n\n\n")
 
         exit_input = input("Do you want to exit the game? [Y/N] ").upper()
+        sfx.play()
 
         if exit_input == "N":
             ukpanaMenu3()
@@ -1808,6 +1819,7 @@ def medusaExit3():
         print("\n\n\n\n\n\n\n\n")
 
         exit_input = input("Do you want to exit the game? [Y/N] ").upper()
+        sfx.play()
 
         if exit_input == "N":
             medusaMenu3()
@@ -1852,6 +1864,7 @@ def darleneExit4():
         print("\n\n\n\n\n\n\n\n")
 
         exit_input = input("Do you want to exit the game? [Y/N] ").upper()
+        sfx.play()
 
         if exit_input == "N":
             darleneMenu4()
@@ -1895,6 +1908,7 @@ def barslafExit4():
         print("\n\n\n\n\n\n\n\n")
 
         exit_input = input("Do you want to exit the game? [Y/N] ").upper()
+        sfx.play()
 
         if exit_input == "N":
             barslafMenu4()
@@ -1938,6 +1952,7 @@ def ukpanaExit4():
         print("\n\n\n\n\n\n\n\n")
 
         exit_input = input("Do you want to exit the game? [Y/N] ").upper()
+        sfx.play()
 
         if exit_input == "N":
             ukpanaMenu4()
@@ -1981,7 +1996,8 @@ def medusaExit4():
         print("\n\n\n\n\n\n\n\n")
 
         exit_input = input("Do you want to exit the game? [Y/N] ").upper()
-
+        sfx.play()
+        
         if exit_input == "N":
             medusaMenu4()
 

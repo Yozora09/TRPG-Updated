@@ -1,9 +1,12 @@
 #battle sa PET: Barslaf
-import pygame
+
 from animation import animate
 from random import randint
 from time import sleep
 from pygame import mixer
+
+mixer.init()
+defeatSfx = mixer.Sound(r'sfx\defeat.mp3')
 
 class Barslaf:
     def __init__(self, health):
@@ -11,7 +14,7 @@ class Barslaf:
 
 
 class Pet2(Barslaf):
-    def __init__(self, health=500):
+    def __init__(self, health = 500):
         super().__init__(health)
 
     def skills(self, other):
@@ -506,4 +509,5 @@ def barslafCombat(pet, enemy):
         print("║ ║                                                                                                                                                            ║ ║")
         print("║ ╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝ ║")
         print("╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝")
+        defeatSfx.play()
         print("\n\n\n\n\n\n\n\n")
