@@ -7,6 +7,7 @@ from pygame import mixer
 
 mixer.init()
 atkSfx = mixer.Sound(r'sfx\attack.wav')
+dmgSound3 = mixer.Sound(r'sfx\ukpanaDamage.mp3')
 battleTheme = mixer.Sound(r'sfx\battle.ogg')
 victorySfx = mixer.Sound(r'sfx\victory.mp3')
 defeatSfx = mixer.Sound(r'sfx\defeat.mp3')
@@ -63,6 +64,7 @@ class Mobs3(Ukpana):
         mobDamage = randint(50, 100)
         other.health -= mobDamage
         print(f"\nThe enemy dealt {mobDamage} damage".format(mobDamage))
+        dmgSound3.play()
 
 
 def ukpanaCombat(pet, enemy):

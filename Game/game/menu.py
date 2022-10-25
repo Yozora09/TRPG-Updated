@@ -12,12 +12,15 @@ from pygame import mixer
 import sys
 
 mixer.init()
+menuBgm = mixer.Sound(r'sfx\menuBgm.ogg')
 sfx = mixer.Sound(r'sfx\select.mp3')
 
 
 ##################################################################################### BOY MODEL 1 MENU  ###############################################################################
 def darleneMenu1():
     print("\n\n")
+    menuBgm.play(10)
+    menuBgm.set_volume(0.5)
     print(" ╔██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██╗ ")
     print("██                                                                               ████                                                                                   ██")
     print(" ║                                                                                ██                                                                                    ║ ")
@@ -64,35 +67,44 @@ def darleneMenu1():
 
     match menuSelection:
         case "1":
+            menuBgm.stop()
             darleneCombat(Pet1(), Mobs1())
             b1_darleneBack()
 
         case "2":
+            menuBgm.stop()
             dungeonMode()
             b1_darleneBack()
 
         case "3":
+            menuBgm.stop()
             stats1()
             b1_darleneBack()
 
         case "4":
+            menuBgm.stop()
             gameMechanics()
             b1_darleneBack()
 
         case "5":
+            menuBgm.stop()
             gameInformation()
             b1_darleneBack()
 
         case "6":
+            menuBgm.stop()
             darleneExit1()
 
         case other:
+            menuBgm.stop()
             print("INVALID INPUT")
             darleneMenu1()
 
 
 def barslafMenu1():
     print("\n\n")
+    menuBgm.play(10)
+    menuBgm.set_volume(0.5)
     print(" ╔██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██╗ ")
     print("██                                                                               ████                                                                                   ██")
     print(" ║                                                                                ██                                                                                    ║ ")
@@ -168,6 +180,8 @@ def barslafMenu1():
 
 def ukpanaMenu1():
     print("\n\n")
+    menuBgm.play(10)
+    menuBgm.set_volume(0.5)
     print(" ╔██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██╗ ")
     print("██                                                                               ████                                                                                   ██")
     print(" ║                                                                                ██                                                                                    ║ ")
@@ -243,6 +257,8 @@ def ukpanaMenu1():
 
 def medusaMenu1():
     print("\n\n")
+    menuBgm.play(10)
+    menuBgm.set_volume(0.5)
     print(" ╔██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██╗ ")
     print("██                                                                               ████                                                                                   ██")
     print(" ║                                                                                ██                                                                                    ║ ")
@@ -319,6 +335,8 @@ def medusaMenu1():
 ##################################################################################### BOY MODEL 2 MENU ################################################################################
 def darleneMenu2():
     print("\n\n")
+    menuBgm.play(10)
+    menuBgm.set_volume(0.5)
     print(" ╔██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██╗ ")
     print("██                                                                               ████                                                                                   ██")
     print(" ║                                                                                ██                                                                                    ║ ")
@@ -365,34 +383,43 @@ def darleneMenu2():
 
     match menuSelection:
         case "1":
+            menuBgm.stop()
             darleneCombat(Pet1(),Mobs1())
             b2_darleneBack()
 
         case "2":
+            menuBgm.stop()
             dungeonMode()
             b2_darleneBack()
 
         case "3":
+            menuBgm.stop()
             stats1()
             b2_darleneBack()
 
         case "4":
+            menuBgm.stop()
             gameMechanics()
             b2_darleneBack()
 
         case "5":
+            menuBgm.stop()
             gameInformation()
             b2_darleneBack()
 
         case "6":
+            menuBgm.stop()
             darleneExit2()
 
         case other:
+            menuBgm.stop()
             print("INVALID INPUT")
             darleneMenu2()
 
 def barslafMenu2():
     print("\n\n")
+    menuBgm.play(10)
+    menuBgm.set_volume(0.5)
     print(" ╔██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██╗ ")
     print("██                                                                               ████                                                                                   ██")
     print(" ║                                                                                ██                                                                                    ║ ")
@@ -438,29 +465,36 @@ def barslafMenu2():
 
     match menuSelection:
         case "1":
+            menuBgm.stop()
             barslafCombat(Pet2(),Mobs2())
             b2_barslafBack()
 
         case "2":
+            menuBgm.stop()
             dungeonMode()
             b2_barslafBack()
 
         case "3":
+            menuBgm.stop()
             stats2()
             b2_barslafBack()
 
         case "4":
+            menuBgm.stop()
             gameMechanics()
             b2_barslafBack()
 
         case "5":
+            menuBgm.stop()
             gameInformation()
             b2_barslafBack()
 
         case "6":
+            menuBgm.stop()
             barslafExit2()
 
         case other:
+            menuBgm.stop()
             print("INVALID INPUT")
             barslafMenu2()
 
@@ -468,6 +502,8 @@ def barslafMenu2():
 
 def ukpanaMenu2():
     print("\n\n")
+    menuBgm.play(10)
+    menuBgm.set_volume(0.5)
     print(" ╔██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██╗ ")
     print("██                                                                               ████                                                                                   ██")
     print(" ║                                                                                ██                                                                                    ║ ")
@@ -513,29 +549,36 @@ def ukpanaMenu2():
 
     match menuSelection:
         case "1":
+            menuBgm.stop()
             ukpanaCombat(Pet3(), Mobs3())
             b2_ukpanaBack()
 
         case "2":
+            menuBgm.stop()
             dungeonMode()
             b2_ukpanaBack()
 
         case "3":
+            menuBgm.stop()
             stats3()
             b2_ukpanaBack()
 
         case "4":
+            menuBgm.stop()
             gameMechanics()
             b2_ukpanaBack()
 
         case "5":
+            menuBgm.stop()
             gameInformation()
             b2_ukpanaBack()
 
         case "6":
+            menuBgm.stop()
             ukpanaExit2()
 
         case other:
+            menuBgm.stop()
             print("INVALID INPUT")
             ukpanaMenu2()
 
@@ -543,6 +586,8 @@ def ukpanaMenu2():
 
 def medusaMenu2():
     print("\n\n")
+    menuBgm.play(10)
+    menuBgm.set_volume(0.5)
     print(" ╔██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██╗ ")
     print("██                                                                               ████                                                                                   ██")
     print(" ║                                                                                ██                                                                                    ║ ")
@@ -588,29 +633,36 @@ def medusaMenu2():
 
     match menuSelection:
         case "1":
+            menuBgm.stop()
             medusaCombat(Pet4(), Mobs4())
             b2_medusaBack()
 
         case "2":
+            menuBgm.stop()
             dungeonMode()
             b2_medusaBack()
 
         case "3":
+            menuBgm.stop()
             stats4()
             b2_medusaBack()
 
         case "4":
+            menuBgm.stop()
             gameMechanics()
             b2_medusaBack()
 
         case "5":
+            menuBgm.stop()
             gameInformation()
             b2_medusaBack()
 
         case "6":
+            menuBgm.stop()
             medusaExit2()
 
         case other:
+            menuBgm.stop()
             print("INVALID INPUT")
             medusaMenu2()
 
@@ -618,6 +670,8 @@ def medusaMenu2():
 ################################################################################### GIRL MODEL 1 MENU  ###############################################################################
 def darleneMenu3():
     print("\n\n")
+    menuBgm.play(10)
+    menuBgm.set_volume(0.5)
     print(" ╔██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██╗ ")
     print("██                                                                               ████                                                                                   ██")
     print(" ║                                                                                ██                                                                                    ║ ")
@@ -663,35 +717,44 @@ def darleneMenu3():
 
     match menuSelection:
         case "1":
+            menuBgm.stop()
             darleneCombat(Pet1(), Mobs1())
             g1_darleneBack()
 
         case "2":
+            menuBgm.stop()
             dungeonMode()
             g1_darleneBack()
 
         case "3":
+            menuBgm.stop()
             stats1()
             g1_darleneBack()
 
         case "4":
+            menuBgm.stop()
             gameMechanics()
             g1_darleneBack()
 
         case "5":
+            menuBgm.stop()
             gameInformation()
             g1_darleneBack()
 
         case "6":
+            menuBgm.stop()
             darleneExit3()
 
         case other:
+            menuBgm.stop()
             print("INVALID INPUT")
             darleneMenu3()
 
 
 def barslafMenu3():
     print("\n\n")
+    menuBgm.play(10)
+    menuBgm.set_volume(0.5)
     print(" ╔██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██╗ ")
     print("██                                                                               ████                                                                                   ██")
     print(" ║                                                                                ██                                                                                    ║ ")
@@ -737,35 +800,44 @@ def barslafMenu3():
 
     match menuSelection:
         case "1":
+            menuBgm.stop()
             barslafCombat(Pet2(), Mobs2())
             g1_barslafBack()
 
         case "2":
+            menuBgm.stop()
             dungeonMode()
             g1_barslafBack()
 
         case "3":
+            menuBgm.stop()
             stats2()
             g1_barslafBack()
 
         case "4":
+            menuBgm.stop()
             gameMechanics()
             g1_barslafBack()
 
         case "5":
+            menuBgm.stop()
             gameInformation()
             g1_barslafBack()
 
         case "6":
+            menuBgm.stop()
             barslafExit3()
 
         case other:
+            menuBgm.stop()
             print("INVALID INPUT")
             barslafMenu3()
 
 
 def ukpanaMenu3():
     print("\n\n")
+    menuBgm.play(10)
+    menuBgm.set_volume(0.5)
     print(" ╔██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██╗ ")
     print("██                                                                               ████                                                                                   ██")
     print(" ║                                                                                ██                                                                                    ║ ")
@@ -811,29 +883,36 @@ def ukpanaMenu3():
 
     match menuSelection:
         case "1":
+            menuBgm.stop()
             ukpanaCombat(Pet3(), Mobs3())
             g1_ukpanaBack()
 
         case "2":
+            menuBgm.stop()
             dungeonMode()
             g1_ukpanaBack()
 
         case "3":
+            menuBgm.stop()
             stats3()
             g1_ukpanaBack()
 
         case "4":
+            menuBgm.stop()
             gameMechanics()
             g1_ukpanaBack()
 
         case "5":
+            menuBgm.stop()
             gameInformation()
             g1_ukpanaBack()
 
         case "6":
+            menuBgm.stop()
             ukpanaExit3()
 
         case other:
+            menuBgm.stop()
             print("INVALID INPUT")
             ukpanaMenu3()
 
@@ -841,6 +920,8 @@ def ukpanaMenu3():
 
 def medusaMenu3():
     print("\n\n")
+    menuBgm.play(10)
+    menuBgm.set_volume(0.5)
     print(" ╔██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██╗ ")
     print("██                                                                               ████                                                                                   ██")
     print(" ║                                                                                ██                                                                                    ║ ")
@@ -886,29 +967,36 @@ def medusaMenu3():
 
     match menuSelection:
         case "1":
+            menuBgm.stop()
             medusaCombat(Pet4(), Mobs4())
             g1_medusaBack()
 
         case "2":
+            menuBgm.stop()
             dungeonMode()
             g1_medusaBack()
 
         case "3":
+            menuBgm.stop()
             stats4()
             g1_medusaBack()
 
         case "4":
+            menuBgm.stop()
             gameMechanics()
             g1_medusaBack()
 
         case "5":
+            menuBgm.stop()
             gameInformation()
             g1_medusaBack()
 
         case "6":
+            menuBgm.stop()
             medusaExit3()
 
         case other:
+            menuBgm.stop()
             print("INVALID INPUT")
             medusaMenu3()
 
@@ -916,6 +1004,8 @@ def medusaMenu3():
 ################################################################################### GIRL MODEL 2 MENU  ###############################################################################
 def darleneMenu4():
     print("\n\n")
+    menuBgm.play(10)
+    menuBgm.set_volume(0.5)
     print(" ╔██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██╗ ")
     print("██                                                                               ████                                                                                   ██")
     print(" ║                                                                                ██                                                                                    ║ ")
@@ -961,35 +1051,44 @@ def darleneMenu4():
 
     match menuSelection:
         case "1":
+            menuBgm.stop()
             darleneCombat(Pet1(), Mobs1())
             g2_darleneBack()
 
         case "2":
+            menuBgm.stop()
             dungeonMode()
             g2_darleneBack()
 
         case "3":
+            menuBgm.stop()
             stats1()
             g2_darleneBack()
 
         case "4":
+            menuBgm.stop()
             gameMechanics()
             g2_darleneBack()
 
         case "5":
+            menuBgm.stop()
             gameInformation()
             g2_darleneBack()
 
         case "6":
+            menuBgm.stop()
             darleneExit4()
 
         case other:
+            menuBgm.stop()
             print("INVALID INPUT")
             darleneMenu4()
 
 
 def barslafMenu4():
     print("\n\n")
+    menuBgm.play(10)
+    menuBgm.set_volume(0.5)
     print(" ╔██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██╗ ")
     print("██                                                                               ████                                                                                   ██")
     print(" ║                                                                                ██                                                                                    ║ ")
@@ -1035,35 +1134,44 @@ def barslafMenu4():
 
     match menuSelection:
         case "1":
+            menuBgm.stop()
             barslafCombat(Pet2(), Mobs2())
             g2_barslafBack()
 
         case "2":
+            menuBgm.stop()
             dungeonMode()
             g2_barslafBack()
 
         case "3":
+            menuBgm.stop()
             stats2()
             g2_barslafBack()
 
         case "4":
+            menuBgm.stop()
             gameMechanics()
             g2_barslafBack()
 
         case "5":
+            menuBgm.stop()
             gameInformation()
             g2_barslafBack()
 
         case "6":
+            menuBgm.stop()
             barslafExit4()
 
         case other:
+            menuBgm.stop()
             print("INVALID INPUT")
             barslafMenu4()
 
 
 def ukpanaMenu4():
     print("\n\n")
+    menuBgm.play(10)
+    menuBgm.set_volume(0.5)
     print(" ╔██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██╗ ")
     print("██                                                                               ████                                                                                   ██")
     print(" ║                                                                                ██                                                                                    ║ ")
@@ -1109,35 +1217,44 @@ def ukpanaMenu4():
 
     match menuSelection:
         case "1":
+            menuBgm.stop()
             ukpanaCombat(Pet3(), Mobs3())
             g2_ukpanaBack()
 
         case "2":
+            menuBgm.stop()
             dungeonMode()
             g2_ukpanaBack()
 
         case "3":
+            menuBgm.stop()
             stats3()
             g2_ukpanaBack()
 
         case "4":
+            menuBgm.stop()
             gameMechanics()
             g2_ukpanaBack()
 
         case "5":
+            menuBgm.stop()
             gameInformation()
             g2_ukpanaBack()
 
         case "6":
+            menuBgm.stop()
             ukpanaExit4()
 
         case other:
+            menuBgm.stop()
             print("INVALID INPUT")
             ukpanaMenu4()
 
 
 def medusaMenu4():
     print("\n\n")
+    menuBgm.play(10)
+    menuBgm.set_volume(0.5)
     print(" ╔██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██══██╗ ")
     print("██                                                                               ████                                                                                   ██")
     print(" ║                                                                                ██                                                                                    ║ ")
@@ -1183,29 +1300,36 @@ def medusaMenu4():
 
     match menuSelection:
         case "1":
+            menuBgm.stop()
             medusaCombat(Pet4(), Mobs4())
             g2_medusaBack()
 
         case "2":
+            menuBgm.stop()
             dungeonMode()
             g2_medusaBack()
 
         case "3":
+            menuBgm.stop()
             stats4()
             g2_medusaBack()
 
         case "4":
+            menuBgm.stop()
             gameMechanics()
             g2_medusaBack()
 
         case "5":
+            menuBgm.stop()
             gameInformation()
             g2_medusaBack()
 
         case "6":
+            menuBgm.stop()
             medusaExit4()
 
         case other:
+            menuBgm.stop()
             print("INVALID INPUT")
             medusaMenu4()
 
